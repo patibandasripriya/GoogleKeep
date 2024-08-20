@@ -1,0 +1,51 @@
+<mat-card class="example-card" appearance="outlined">
+<mat-card-header>
+    <img src="../../assets/googleImage.jpg" alt="googleImage" class="googleImage">
+</mat-card-header>
+<div class="card-content">
+  <div class="content-left">
+    <h1>Sign in</h1>
+    <h4>to Continue in Gmail</h4>
+  </div>
+  <div class="content-right">
+    <form [formGroup]="loginForm">
+      <mat-form-field appearance="outline">
+        <mat-label>Email or Phone</mat-label>
+        <input matInput placeholder="Email" formControlName="email">
+      </mat-form-field>
+      <div class="emailError" *ngIf="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)">
+        provide a valid email.
+      </div>
+    </form> 
+    <a class="mat-form-field[_ngcontent-gjq-c88]" href="../register/register.component.html">Forgot email?</a>
+    <p class="message">
+      Not your computer? Use Guest mode to sign in privately. 
+      Learn more about using Guest mode.
+    </p>
+  </div>  
+</div>
+<mat-card-actions>
+    <a [routerLink]="['/register']" class="createAccount">Create Account</a>
+    <button [routerLink]="['/password']" class="nextButton" (click)="handleLogin()"  mat-button>Next</button>
+</mat-card-actions>    
+</mat-card> 
+
+<mat-form-field class="btm" appearance="fill" >
+  <mat-select [value]="'en-US'">
+    <mat-option class="opt" value="en-US">English (United States)</mat-option>
+    <mat-option class="opt" value="fr">French</mat-option>
+    <mat-option class="opt" value="de">German</mat-option>
+    <mat-option class="opt" value="it">Italian</mat-option>
+    <mat-option class="opt" value="es">Spanish</mat-option>
+    <mat-option class="opt" value="pt">Portuguese</mat-option>
+    <mat-option class="opt" value="ja">Japanese</mat-option>
+    <mat-option class="opt" value="ko">Korean</mat-option>
+  </mat-select>
+</mat-form-field>
+<button class="footerbutton" mat-button>Help</button>
+<button class="footerbutton1" mat-button>Privacy</button>
+<button class="footerbutton1" mat-button>Terms</button>
+
+
+  
+
