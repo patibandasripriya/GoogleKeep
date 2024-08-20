@@ -1,24 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../services/http-service/http.service';
-import { NotesService } from '../services/notes-service/notes.service';
-
+import { Component, OnInit,Input } from '@angular/core';
+import { NotesService } from '../Services/notes.service';
+import { Router } from '@angular/router';
+import { NavigationEnd } from '@angular/router';
 @Component({
   selector: 'app-notes-container',
   templateUrl: './notes-container.component.html',
-  styleUrls: ['./notes-container.component.scss'],
+  styleUrls: ['./notes-container.component.scss']
 })
 export class NotesContainerComponent implements OnInit {
-  notesList: any = [];
-
-  constructor(private notesService: NotesService) {}
-
+  @Input() noteslist:any;
+  isNotesRoute:boolean=false;
+  constructor(private notesService:NotesService, private router:Router) { }
   ngOnInit(): void {
-    this.notesService.getAllNotesApiCall("getNotesList").subscribe({
-      next: (r: any) => {
-        this.notesList = r.data.data;
-        console.log('result is: ', this.notesList);
+    this.notesService.getAllNotes('getNotesList').subscribe({
+      next:(res:any)=>{
+        console.log(res.data.data);
+        this.noteslist=res.data.data;
       },
-      error: (e) => {},
-    });
+      error:(err: any) => console.log(err),
+      complete:()=>{}
+    })
   }
 }

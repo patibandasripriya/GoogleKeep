@@ -1,0 +1,85 @@
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+        <img src="../../assets/googleImage.jpg" alt="googleImage" class="googleImage">
+    </mat-card-header>
+    <div class="card-content">
+      <div class="content-left">
+        <h1 class="mainHeading">Basic information</h1>
+        <h4 class="mainHeading-side2">Enter Your birthday and gender</h4>
+      </div>
+      <div class="content-right">
+        <form class="inputForm">
+                <!-- <mat-form-field class="DateModel"> -->
+                    <div class="BirthDate">
+                        <div class="monthDiv">
+                            <fieldset class="selectMonth">
+                                <legend>Month</legend>
+                                <mat-select>
+                                  <mat-option value="1">Jan</mat-option>
+                                  <mat-option value="2">Feb</mat-option>
+                                  <mat-option value="3">Mar</mat-option>
+                                  <mat-option value="4">Apr</mat-option>
+                                  <mat-option value="5">May</mat-option>
+                                  <mat-option value="6">Jun</mat-option>
+                                  <mat-option value="7">Jul</mat-option>
+                                  <mat-option value="8">Aug</mat-option>
+                                  <mat-option value="9">Sep</mat-option>
+                                  <mat-option value="10">Oct</mat-option>
+                                  <mat-option value="11">Nov</mat-option>
+                                  <mat-option value="12">Dec</mat-option>
+                                </mat-select>
+                              </fieldset>
+                        </div>
+                        <div class="dayDiv">
+                            <fieldset class="selectDay">
+                                <legend>Day</legend>
+                                <input placeholder="Day" style="width:58px">
+                            </fieldset>
+                        </div>
+                        <div class="yearDiv" >
+                            <fieldset class="selectYear">
+                                <legend>Year</legend>
+                                <input placeholder="Year" style="width:58px">
+                            </fieldset>
+                        </div>
+                    </div>
+                  <!-- </mat-form-field> -->
+        </form> 
+        <form>
+            <fieldset class="genderBox">
+                <legend>Gender</legend>
+                <mat-select>
+                    <mat-option class="opt" value="Male">Male</mat-option>
+                    <mat-option class="opt" value="Female">Female</mat-option>
+                    <mat-option class="opt" value="Rather">Rather not Say</mat-option>
+                  </mat-select>
+            </fieldset>
+        </form>
+      </div>  
+    </div>
+    <p class="infowarn">Why we ask for birthday and gender</p>
+    <mat-card-actions>
+        <button class="Next" mat-button [routerLink]="['/confirmpassword']">Next</button>
+    </mat-card-actions>    
+    </mat-card> 
+    
+    <mat-form-field class="btm" appearance="fill" >
+      <mat-select [value]="'en-US'">
+        <mat-option class="opt" value="en-US">English (United States)</mat-option>
+        <mat-option class="opt" value="fr">French</mat-option>
+        <mat-option class="opt" value="de">German</mat-option>
+        <mat-option class="opt" value="it">Italian</mat-option>
+        <mat-option class="opt" value="es">Spanish</mat-option>
+        <mat-option class="opt" value="pt">Portuguese</mat-option>
+        <mat-option class="opt" value="ja">Japanese</mat-option>
+        <mat-option class="opt" value="ko">Korean</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button class="footerbutton" mat-button>Help</button>
+    <button class="footerbutton1" mat-button>Privacy</button>
+    <button class="footerbutton1" mat-button>Terms</button>
+    
+    
+      
+    
+    

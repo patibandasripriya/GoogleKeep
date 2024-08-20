@@ -1,105 +1,141 @@
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
-
-.login-container {
-    border: 1px solid black;
+.example-card{
+    max-width: 800px;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    margin-top: 7%;
-    margin-left: 32%;
-    margin-right: 32%;
-    padding: 3%;
-    border-radius: 8px;
-    padding-bottom: 2%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-.footer-links {
+mat-card{
+   height:300px; 
+}
+
+.content-left{
+    max-width: 400px;
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-weight: 400px;
+}
+
+.content-right{
+    max-width: 400px;
+}
+
+mat-form-field{
+    width: 350px;
+    margin-left: 250px;
+    padding-bottom: 10px;
+}
+
+form{
+   height:65px; 
+}
+
+.message{
+    margin-left: 550px;
+    padding-left: 240px;
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-weight: 400px;
+    line-height: 1.4285714286;
+    margin-top: 32px;
+    width: 350px;
+    margin-left: 10px;
+}
+
+mat-card-header{
+    margin-left: 0;
+}
+
+.googleImage{
+    width: 48px;
+    height: 48px;
+}
+
+.card-content{
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    padding-left: 33%;
-    padding-right: 32%;
-    justify-content: space-between;
-    font-size: 0.9em;
+    margin-left: 40px;
+    margin-top: 15px;
 }
 
-#language-select {
-    background: none;
-    border: none;
-    color: rgb(78, 64, 64);
+a{
+    margin-left: 250px;
+    text-decoration: none;
 }
 
-// .footer-links a {
-//     margin: 0 10px;
-//     color: #007BFF;
-//     text-decoration: none;
-// }
-// .footer-links a:hover {
-//     text-decoration: underline;
-// }
-.login-createaccount-login {
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.messageLink{
+    text-decoration: none;
 }
 
-.login-normal-button {
-    background: none;
-    color: rgb(21, 21, 162);
-    border: none;
-    width: 32%;
-    margin-right: 68%;
-    margin-bottom: 7%;
-    padding: 0%;
-    text-align: left;
+mat-card-actions{
+    margin-left: 370px;
 }
 
-.login-normal-button1 {
-    background: none;
-    color: rgb(21, 21, 162);
-    border: none;
-    width: 32%;
-    padding: 0%;
-    text-align: left;
+.btm{
+    margin-left: 200px;
+    margin-top: 10px;
+    width:200px;
+    border-radius: 16px;
+    background-color: #f0f4f9 !important;
+    padding-bottom: auto;
+    height:32px;
 }
 
-.login-normal-button2 {
-    background: none;
-    color: rgb(29, 29, 33);
-    border: none;
+.mat-form-field-appearance-fill .mat-form-field-flex{
+    background-color: #ffff !important;
 }
 
-.footer-links1 {
-
-    background: none;
-    border: none;
-
+.footerbutton{
+    margin-left: 400px;
+    margin-top: 10px;
+    border-radius: 16px;
+    background-color: #f0f4f9 !important;
 }
 
+.opt{
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
 
-@media (min-width:350px) and (max-width:950px) {
-    .login-container {
-        width: 100%;
-        margin-left: 0%;
-        margin-right: 0%;
-    }
+.btm .mat-form-field-underline {
+    display: none;
+}
 
-    .footer-links {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.createAccount{
+    color: #0b57d0 !important;
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    margin-right: 10px;
+}
+  
+.nextButton{
+    color:#f0f4f9 !important;
+    border-radius: 20px;
+    background-color: #0b57d0 !important;
+    margin-right: 30px;
+}
 
-    .footer-links2 {
-        margin-right: 6%;
-    }
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    padding: 0;
+    background-color: #f0f4f9;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-select-arrow-wrapper {
+    transform: none !important;
+}
+
+::ng-deep .mat-form-field-underline {
+    width:0% !important;
+}
+
+.footerbutton1,.footerbutton{
+    font-family: "Google Sans", roboto, "Noto Sans Myanmar UI", arial, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.00625rem;
+    line-height: 1.3333333333;
+}
+
+.emailError{
+margin-left: 250px;
 }

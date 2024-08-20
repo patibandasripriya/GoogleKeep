@@ -1,0 +1,46 @@
+// .mat-drawer-container{
+//     display: inline;
+//     background-color: #f5f5f5;
+//     width: 50%;
+//     z-index: 0;
+// }
+
+// mat-sidenav {
+//     width: 200px;
+//     border: none; 
+//   }
+
+//   mat-list-item {
+//     display: flex;
+//     align-items: center;
+//   }
+//   mat-icon {
+//     margin-right: 16px;
+//   }
+
+// .mat-drawer{
+//     background-color: #f5f5f5;
+// }
+
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width:18%;
+  // margin-top: 5.1%;
+  height:100%;
+  padding-top: 50px;
+  position:fixed;
+
+}
+.sidebar-contents{
+display: flex;
+flex-direction: row;
+justify-content: left;
+gap:20px;
+margin:2%;
+height: 60px;
+font-size: medium;
+cursor: pointer;
+}

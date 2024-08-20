@@ -1,46 +1,26 @@
-<div class="navbar">
-    <div class="navbar-contents" [routerLink]="['/dashboard/notes']"    >
-        <mat-icon svgIcon="note-icon" aria-hidden="false" aria-label="note icon"></mat-icon>
-        <span>Note</span>
-    </div>
-    <div class="navbar-contents" >
-        <mat-icon svgIcon="reminder-icon" aria-hidden="false" aria-label="reminder icon"></mat-icon>
-        <span>Reminder</span>
-    </div>
-    <!-- <div class="navbar-contents">
-        <mat-icon>label</mat-icon>
-        <span>hjjh</span>
-    </div> -->
-    <div class="navbar-contents">
-        <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="edit icon"></mat-icon>
-        <span>Edit label</span>
-    </div>
-    <div class="navbar-contents" [routerLink]="['/dashboard/archieve']">
-        <mat-icon svgIcon="archive-icon" aria-hidden="false" aria-label="archive icon"></mat-icon>
-        <span>Archive</span>
-    </div>
-    <div class="navbar-contents" [routerLink]="['/dashboard/trash']">
-        <mat-icon svgIcon="trash-icon" aria-hidden="false" aria-label="trash icon"></mat-icon>
-        <span>Trash</span>
-    </div>
-</div>
+<mat-toolbar>
+    <button mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <img src="../../assets/keepNotes.jpg" alt="KeepNotes" class="logo">
+    <span>Keep</span>
+    <span class="spacer"></span>
+    <mat-form-field appearance="outline">
+      <mat-icon>search</mat-icon>
+      <input matInput>
+      <button class="searchBar" mat-icon-button matSuffix></button>
+    </mat-form-field>
+    <div class="icons">
+        <mat-icon class="refersh">refresh</mat-icon>
+        <mat-icon>lists</mat-icon>
+        <mat-icon>settings</mat-icon>
+      </div>
+      <mat-icon class="apps">apps</mat-icon>
+    <button mat-icon-button>
+      <img src="../../assets/digit.jpg" alt="Avatar" class="avatar">
+      <!-- <mat-icon mat-card-avatar>home</mat-icon> -->
+      <mat-icon>account_circle</mat-icon>
+    </button>
 
-
-
-<!-- <div class="navbar-onlyicons">
-    <div class="navbar-contents">
-     <mat-icon svgIcon="note-icon" aria-hidden="false" aria-label="note icon"></mat-icon>
-    </div>
-    <div class="navbar-contents">
-     <mat-icon svgIcon="reminder-icon" aria-hidden="false" aria-label="reminder icon"></mat-icon>
-    </div>
-    <div class="navbar-contents">
-     <mat-icon svgIcon="edit-icon" aria-hidden="false" aria-label="edit icon"></mat-icon>
-    </div>
-    <div class="navbar-contents">
-     <mat-icon svgIcon="archive-icon" aria-hidden="false" aria-label="archive icon"></mat-icon>
-    </div>
-    <div class="navbar-contents">
-     <mat-icon svgIcon="trash-icon" aria-hidden="false" aria-label="trash icon"></mat-icon>
-    </div>
- </div> -->
+  </mat-toolbar>
+  

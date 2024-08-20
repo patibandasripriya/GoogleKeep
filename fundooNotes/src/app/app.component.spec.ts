@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'google-keep'`, () => {
+  it(`should have as title 'fundooNotes'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('google-keep');
+    expect(app.title).toEqual('fundooNotes');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('google-keep app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('fundooNotes app is running!');
   });
 });

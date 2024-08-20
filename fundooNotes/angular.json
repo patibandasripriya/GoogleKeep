@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "google-keep": {
+    "fundooNotes": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/google-keep",
+            "outputPath": "dist/fundoo-notes",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "google-keep:build:production"
+              "browserTarget": "fundooNotes:build:production"
             },
             "development": {
-              "browserTarget": "google-keep:build:development"
+              "browserTarget": "fundooNotes:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "google-keep:build"
+            "browserTarget": "fundooNotes:build"
           }
         },
         "test": {
@@ -107,6 +107,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "cd48b9f2-0eca-43b2-9adf-8ba64e858b05"
   }
 }

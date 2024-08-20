@@ -1,72 +1,48 @@
-<div class="register">
-    <form class="register-container" [formGroup]="registerForm">
-        <div class="register-container-main">
-            <h2 style="color: rgb(230, 230, 37)"><b>Fundo</b></h2>
-            <p>Create your Fundo Account</p>
-            <div class="register-container-main-name">
-                <mat-form-field appearance="outline" class="register-container-main-name1">
-                    <mat-label>First Name</mat-label>
-                    <input matInput placeholder="First Name*" formControlName="firstName" />
-                </mat-form-field>
-                <mat-form-field appearance="outline" class="register-container-main-name1">
-                    <mat-label>Last Name</mat-label>
-                    <input matInput placeholder="Last Name*" formControlName="lastName" />
-                </mat-form-field>
-            </div>
-            <div class="register-container-main-username">
-                <mat-form-field appearance="outline" style="width: 100%">
-                    <mat-label>Username</mat-label>
-                    <input matInput placeholder="Username*" formControlName="userName" />
-                    <mat-hint>you can use letters,numbers and periods</mat-hint>
-                </mat-form-field>
-            </div>
-
-
-            <div class="register-container-main-password">
-                <mat-form-field appearance="outline" class="register-container-main-password11">
-                    <mat-label>Password</mat-label>
-                    <input matInput placeholder="Password*" formControlName="password" />
-                    <mat-hint>Use 8 or more characters with a mix of letters,numbers and
-                        symbols</mat-hint>
-                    <mat-error *ngIf="registerControl['password']?.hasError('required')">Password required</mat-error>
-                    <mat-error *ngIf="registerControl['password']?.hasError('minlength')">minimum length is
-                        8</mat-error>
-                </mat-form-field>
-                <mat-form-field appearance="outline" class="register-container-main-password12">
-                    <mat-label>Confirm</mat-label>
-                    <input matInput placeholder="Confirm*" formControlName="confirmPassword" />
-                </mat-form-field>
-            </div>
-            <div class="register-container-main-button">
-                <button class="register-container-main-sign-in-instead" (click)="redirectToLogin()" style="cursor: pointer;">
-                    <b>Sign in instead</b>
-                </button>
-                <button mat-flat-button color="primary" (click)="handleRegister()">Register</button>
-            </div>
-        </div>
-        <div class="register-container-picture">
-            <img src="../../assets/register page image.png" />
-            <h2 style="padding-left: 10%; padding-right:5%">One account. All of Fundo working for you</h2>
-        </div>
-    </form>
-
-    <div class="footer-links">
-        <div class="footer-links1">
-            <select id="language-select" title="English (United States)">
-                <option value="en-US">English (United States)</option>
-                <option value="en-GB">English (United Kingdom)</option>
-                <option value="es-ES">Spanish (Spain)</option>
-                <option value="fr-FR">French (France)</option>
-                <option value="de-DE">German (Germany)</option>
-                <option value="zh-CN">Chinese (Simplified)</option>
-                <option value="ja-JP">Japanese</option>
-                <option value="hi-IN">Hindi (India)</option>
-            </select>
-        </div>
-        <div class="footer-links2">
-            <button class="login-normal-button2">Help</button>
-            <button class="login-normal-button2">Privacy</button>
-            <button class="login-normal-button2">terms</button>
-        </div>
+<mat-card class="example-card" appearance="outlined">
+    <mat-card-header>
+        <img src="../../assets/googleImage.jpg" alt="googleImage" class="googleImage">
+    </mat-card-header>
+    <div class="card-content">
+      <div class="content-left">
+        <h1 class="mainHeading">Create a Google</h1>
+        <h1 class="mainHeading-side">Account</h1>
+        <h4 class="mainHeading-side2">Enter Your Name</h4>
+      </div>
+      <div class="content-right">
+        <form>
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input matInput placeholder="First Name">
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name(Optional)</mat-label>
+            <input matInput placeholder="Last Name(Optional)">
+          </mat-form-field>
+        </form> 
+      </div>  
     </div>
-</div>
+    <mat-card-actions>
+        <button class="Next" mat-button [routerLink]="['/birthdetails']">Next</button>
+    </mat-card-actions>    
+    </mat-card> 
+    
+    <mat-form-field class="btm" appearance="fill" >
+      <mat-select [value]="'en-US'">
+        <mat-option class="opt" value="en-US">English (United States)</mat-option>
+        <mat-option class="opt" value="fr">French</mat-option>
+        <mat-option class="opt" value="de">German</mat-option>
+        <mat-option class="opt" value="it">Italian</mat-option>
+        <mat-option class="opt" value="es">Spanish</mat-option>
+        <mat-option class="opt" value="pt">Portuguese</mat-option>
+        <mat-option class="opt" value="ja">Japanese</mat-option>
+        <mat-option class="opt" value="ko">Korean</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <button class="footerbutton" mat-button>Help</button>
+    <button class="footerbutton1" mat-button>Privacy</button>
+    <button class="footerbutton1" mat-button>Terms</button>
+    
+    
+      
+    
+    

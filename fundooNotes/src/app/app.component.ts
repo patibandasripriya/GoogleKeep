@@ -5,6 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent {
-  title = 'google-keep';
+  title = 'fundooNotes';
+  obj:any={email:"",password:""};
+  constructor(){}
 }
